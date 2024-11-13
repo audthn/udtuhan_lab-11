@@ -1,0 +1,33 @@
+student = 0
+passed = 0
+grade = []
+
+for x in range(5):
+   num = int(input("Enter your grade: "))
+   
+   if num <= 39 or num >+ 101:
+       print("Invalid input.Number must be between 40 and 100")
+       break
+   else:
+       grade.append(num)
+       
+   if num >=75:
+       passed += 1
+       student += 1
+   else:
+       student += 1
+       
+   if student == 5:
+       print()
+       sumNums = sum(grade)
+       averageGrade = sumNums / 5
+       averageGrade = round(averageGrade, 2)
+       
+       passPercent = (passed / len(grade)) * 100
+       passPercent = round(passPercent, 2)
+       
+       print("Grades inputted: " + str(grade))
+       print("Average grade: " + str(averageGrade))
+       print("Average grade: " + str(passed))
+       print("Average grade: " + str(passPercent) + "%")
+
