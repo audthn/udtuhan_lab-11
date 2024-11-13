@@ -1,0 +1,25 @@
+wordList = []
+i = 0
+
+for x in range(5):
+    word = input("Enter word: ")
+    wordList.append(word)
+    
+    
+letterCount = int(input("Enter a number to find words with that number of letters:"))
+
+anotherList = []
+
+while i < len(wordList):
+    if len(wordList[i]) == letterCount:
+        anotherList.append(wordList[i])
+        
+    i += 1
+
+if anotherList:
+    print("Words with " +str(letterCount) + "letters:")
+    for word in anotherList:
+        print(word)
+    
+else:
+    print("No words found with " + str(letterCount) + "letters:")
